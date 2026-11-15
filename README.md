@@ -3,7 +3,7 @@
 
 Race-proof team formation for a 10,000-person hackathon. When 50 people click "join" on the last seat, exactly one gets it.
 
-**Stack:** Node 20+, Fastify, PostgreSQL, plain HTML/CSS/JS (no build step), Server-Sent Events.
+**Stack:** Node 20+, Fastify , PostgreSQL, React 18, Server-Sent Events.
 
 ## Run it locally (4 commands)
 
