@@ -1,3 +1,4 @@
+![tests](https://github.com/hacker3code/teamforge/actions/workflows/ci.yml/badge.svg)
 # TeamForge
 
 Race-proof team formation for a 10,000-person hackathon. When 50 people click "join" on the last seat, exactly one gets it.
