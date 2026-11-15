@@ -1,0 +1,17 @@
+{
+  "name": "teamforge",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "setup": "tsx src/setup.ts",
+    "seed": "tsx src/seed.ts",
+    "start": "tsx src/server.ts",
+    "dev": "tsx watch src/server.ts",
+    "test": "vitest run",
+    "load": "tsx src/load.ts",
+    "chaos": "tsx src/chaos.ts"
+  },
+  "dependencies": { "fastify": "^5.0.0", "pg": "^8.12.0", "tsx": "^4.19.0", "zod": "^3.23.0" },
+  "devDependencies": { "@types/node": "^22.0.0", "@types/pg": "^8.11.0", "typescript": "^5.6.0", "vitest": "^2.1.0" }
+}

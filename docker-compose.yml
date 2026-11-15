@@ -1,0 +1,14 @@
+# One command for everything:  docker compose up --build   ->  http://localhost:3000
+# (stop your old "pg" container first if it uses port 5432: docker stop pg)
+services:
+  db:
+    image: postgres:16
+    environment: { POSTGRES_PASSWORD: pw }
+    healthcheck: { test: ["CMD-SHELL", "pg_isready -U postgres"], interval: 3s, timeout: 3s, retries: 20 }
+  app:
+    build: .
+    depends_on: { db: { condition: service_healthy } }
+    environment:
+      DATABASE_URL: postgresql://postgres:pw@db:5432/postgres
+      SECRET: change-me-in-production
+    ports: ["3000:3000"]
